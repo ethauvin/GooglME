@@ -1,5 +1,5 @@
 /*
- * @(#)Util.java
+ * @(#)HistoryScreen.java
  *
  * Copyright (c) 2004-2005, Erik C. Thauvin (http://www.thauvin.net/erik/)
  * All rights reserved.
@@ -36,65 +36,30 @@
  */
 package net.thauvin.j2me.googlme;
 
-import javax.microedition.lcdui.Choice;
-import javax.microedition.lcdui.ChoiceGroup;
-import javax.microedition.lcdui.Display;
-import javax.microedition.lcdui.Item;
-import javax.microedition.lcdui.TextField;
+import javax.microedition.lcdui.List;
 
 
 /**
- * The <code>Util</code> class implements methods specific to MIDP 1.x.
+ * The <code>HistoryScreen</code> class implements a form used to display the history.
  *
- * @author  <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
+ * @author  Erik C. Thauvin
  * @version $Revision$, $Date$
- * @created October 8, 2004
+ * @created Oct 12, 2004
  * @since   1.0
  */
-public class Util
+public class HistoryScreen extends List
 {
 	/**
-	 * Disables the default constructor.
+	 * Creates a new HistoryScreen object.
 	 *
-	 * @throws UnsupportedOperationException if the constructor is called.
+	 * @param midlet The MIDlet instance.
 	 */
-	private Util()
+	public HistoryScreen(GooglME midlet)
 	{
-		;
-	}
+		super(GooglME.APP_NAME + " History", List.IMPLICIT);
 
-	/**
-	 * Returns a new exclusive choice group.
-	 *
-	 * @param  title   The title.
-	 * @param  choices The choices.
-	 *
-	 * @return The choice group.
-	 */
-	public static ChoiceGroup getChoiceGroup(String title, String[] choices)
-	{
-		return new ChoiceGroup(title, Choice.EXCLUSIVE, choices, null);
-	}
+		addCommand(GooglME.COMMAND_BACK);
 
-	/**
-	 * Sets the current item.
-	 *
-	 * @param screen The screen.
-	 * @param item   The item.
-	 */
-	public static void setCurrentItem(Display screen, Item item)
-	{
-		; // Do nothing
-	}
-
-	/**
-	 * Sets the initial input mode of the given text field.
-	 *
-	 * @param field     The text field.
-	 * @param inputMode The input mode.
-	 */
-	public static void setInitialInputMode(TextField field, String inputMode)
-	{
-		; // Do nothing
+		setCommandListener(midlet);
 	}
 }

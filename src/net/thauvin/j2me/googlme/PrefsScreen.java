@@ -1,5 +1,5 @@
 /*
- * @(#)HelpScreen.java
+ * @(#)PrefsScreen.java
  *
  * Copyright (c) 2004-2005, Erik C. Thauvin (http://www.thauvin.net/erik/)
  * All rights reserved.
@@ -38,41 +38,50 @@ package net.thauvin.j2me.googlme;
 
 import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.StringItem;
+import javax.microedition.lcdui.TextField;
 
 
 /**
- * The <code>HelpScreen</code> class implements a form used to display some help.
+ * The <code>PrefsScreen</code> class implements a form used to set the preferences.
  *
- * @author  <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
+ * @author  Erik C. Thauvin
  * @version $Revision$, $Date$
- * @created October 8, 2004
+ * @created Oct 12, 2004
  * @since   1.0
  */
-public class HelpScreen extends Form
+public class PrefsScreen extends Form
 {
 	/**
-	 * Creates a new HelpScreen instance.
+	 * The query field.
+	 */
+	protected /* final */ TextField locationFld;
+
+	/**
+	 * The SMS number field.
+	 */
+	protected /* final */ TextField smsFld;
+
+	/**
+	 * Creates a new PrefsScreen object.
 	 *
 	 * @param midlet The MIDlet instance.
 	 */
-	public HelpScreen(GooglME midlet)
+	public PrefsScreen(GooglME midlet)
 	{
-		super(GooglME.APP_NAME + " Help");
+		super(GooglME.APP_NAME + " Settings");
 
-		append(new StringItem(GooglME.CHOICE_GOOGLE_SMS + ": ",
-							  "To get business listings, enter business name and city, state or zip. To get phone numbers, enter name of person and city, state or zip.\n\n"));
-		append(new StringItem(GooglME.CHOICE_GOOGLE_LOCAL + ": ",
-							  "To get local business listings, enter business name. To get local phone numbers, enter name of person. The permanent location setting is automatically added to your query.\n\n"));
-		append(new StringItem(GooglME.CHOICE_FROOGLE_PRICES + ": ", "For product prices, enter the product name.\n\n"));
-		append(new StringItem(GooglME.CHOICE_GOOGLE_SEARCH + ": ",
-							  "For Google search snippets, enter the search terms.\n\n"));
-		append(new StringItem(GooglME.CHOICE_MOVIE_SHOWTIMES + ": ",
-							  "To get movie showtimes, enter the movie's title followed by your location (a zip code or city and state). For a listing of theaters, enter 'theaters' followed by your location. For a listing of movies playing, enter 'movies' followed by your location.\n\n"));
-		append(new StringItem(GooglME.CHOICE_LOCAL_SHOWTIMES + ": ",
-							  "To get local movie showtimes, enter the movie's title. For a listing of theaters near you, enter 'theaters'. For a listing of movies playing near you, enter 'movies'. The permanent location setting is automatically added to your query.\n\n"));
-		append(new StringItem(GooglME.CHOICE_DEFINITION + ": ", "For definitions, enter the word or term.\n\n"));
+		locationFld = new TextField("Location: ", "", 25, TextField.ANY);
+
+		append(locationFld);
+		append(new StringItem("", "Your current city and state or zip. (e.g.: san francisco ca or 94123)"));
+
+		smsFld = new TextField("Google SMS: ", "", 25, TextField.PHONENUMBER);
+
+		append(smsFld);
+		append(new StringItem("", "The short code or number of the Google SMS service. (e.g.: 46645)"));
 
 		addCommand(GooglME.COMMAND_BACK);
+		addCommand(GooglME.COMMAND_SAVE);
 
 		setCommandListener(midlet);
 	}

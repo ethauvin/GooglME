@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project name="GooglME" default="build" basedir=".">
 	<taskdef resource="antenna.properties"/>
 
@@ -53,7 +53,7 @@
 	</target>
 	
 	<target name="jar" depends="compile" description="Builds the MIDP 1.x jar">
-		<property name=" wtk.midp.version" value="1.0"/>
+		<property name="wtk.midp.version" value="1.0"/>
 		<copy todir="${path.deploy}" file="${ant.project.name}.jad"/>
 		<wtkpackage jarfile="${path.deploy}/${ant.project.name}.jar"
 					jadfile="${path.deploy}/${ant.project.name}.jad"

@@ -1,7 +1,7 @@
 /*
  * @(#)MainScreen.java
  *
- * Copyright (c) 2004, Erik C. Thauvin (http://www.thauvin.net/erik/)
+ * Copyright (c) 2004-2005, Erik C. Thauvin (http://www.thauvin.net/erik/)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -44,11 +44,10 @@ import javax.microedition.lcdui.TextField;
 /**
  * The <code>MainScreen</code> class implements a form used to gather the data needed to perform a Google SMS query.
  *
- * @author <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
+ * @author  <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
  * @version $Revision$, $Date$
- *
  * @created October 8, 2004
- * @since 1.0
+ * @since   1.0
  */
 public class MainScreen extends Form
 {
@@ -69,21 +68,22 @@ public class MainScreen extends Form
 	 */
 	public MainScreen(GooglME midlet)
 	{
-		super(midlet.appName);
+		super(GooglME.APP_NAME);
 
 		queryFld = new TextField("Query: ", "", 25, TextField.ANY);
 		Util.setInitialInputMode(queryFld, "MIDP_LOWERCASE_LATIN");
-		actionPopup =
-			Util.getChoiceGroup("Type: ", new String[] { "Google SMS", "Froogle Prices", "Google Search", "Definition" });
+		actionPopup = Util.getChoiceGroup("Type: ", GooglME.CHOICES);
 		actionPopup.setSelectedIndex(0, true);
 		append(queryFld);
 		append(actionPopup);
 
-		addCommand(midlet.helpCommand);
-		addCommand(midlet.aboutCommand);
-		addCommand(midlet.clearCommand);
-		addCommand(midlet.exitCommand);
-		addCommand(midlet.sendCommand);
+		addCommand(GooglME.COMMAND_SEND);
+		addCommand(GooglME.COMMAND_CLEAR);
+		addCommand(GooglME.COMMAND_HISTORY);
+		addCommand(GooglME.COMMAND_SETTINGS);
+		addCommand(GooglME.COMMAND_HELP);
+		addCommand(GooglME.COMMAND_ABOUT);
+		addCommand(GooglME.COMMAND_EXIT);
 
 		setCommandListener(midlet);
 	}

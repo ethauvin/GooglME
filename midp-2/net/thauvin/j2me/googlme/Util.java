@@ -1,7 +1,7 @@
 /*
  * @(#)Util.java
  *
- * Copyright (c) 2004, Erik C. Thauvin (http://www.thauvin.net/erik/)
+ * Copyright (c) 2004-2005, Erik C. Thauvin (http://www.thauvin.net/erik/)
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -45,19 +45,26 @@ import javax.microedition.lcdui.TextField;
 /**
  * The <code>Util</code> class implements methods specific to MIDP 2.x.
  *
- * @author <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
+ * @author  <a href="http://www.thauvin.net/erik/">Erik C. Thauvin</a>
  * @version $Revision$, $Date$
- *
  * @created October 8, 2004
- * @since 1.0
+ * @since   1.0
  */
 public class Util
 {
 	/**
+	 * Disables the default constructor.
+	 */
+	private Util()
+	{
+		;
+	}
+
+	/**
 	 * Returns a new exclusive choice group.
 	 *
-	 * @param title The title.
-	 * @param choices The choices.
+	 * @param  title   The title.
+	 * @param  choices The choices.
 	 *
 	 * @return The choice group.
 	 */
@@ -68,8 +75,9 @@ public class Util
 
 	/**
 	 * Sets the current item.
+	 *
 	 * @param screen The screen.
-	 * @param item The item.
+	 * @param item   The item.
 	 */
 	public static void setCurrentItem(Display screen, Item item)
 	{
@@ -79,7 +87,7 @@ public class Util
 	/**
 	 * Sets the initial input mode of the given text field.
 	 *
-	 * @param field The text field.
+	 * @param field     The text field.
 	 * @param inputMode The input mode.
 	 */
 	public static void setInitialInputMode(TextField field, String inputMode)
