@@ -112,7 +112,7 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 	/**
 	 * The application version.
 	 */
-	protected static final String APP_VERSION = "0.4";
+	protected static final String APP_VERSION = "0.4.1";
 
 	/**
 	 * The <code>Back</code> command.
@@ -737,9 +737,11 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 				text = _query;
 			}
 
+			// NOTE: Must be preformed before sending the SMS on the T616.
+			addHistory(text);
+
 			msg.setPayloadText(text);
 			conn.send(msg);
-			addHistory(text);
 
 			//alert("SMS Sent", "The text message was sent.", _mainScreen, false);
 		}

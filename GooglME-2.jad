@@ -1,7 +1,7 @@
 MIDlet-1: GooglME,/googlme.png,net.thauvin.j2me.googlme.GooglME
 MIDlet-Jar-URL: GooglME-2.jar
 MIDlet-Icon: /googlme.png
-MIDlet-Version: 0.4.0
+MIDlet-Version: 0.4.1
 MIDlet-Description: GooglME
 MIDlet-Name: GooglME
 MIDlet-Vendor: Erik C. Thauvin
