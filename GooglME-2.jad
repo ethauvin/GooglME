@@ -1,0 +1,10 @@
+MIDlet-1: GooglME,/googlme.png,net.thauvin.j2me.googlme.GooglME
+MIDlet-Jar-URL: GooglME-2.jar
+MIDlet-Icon: /googlme.png
+MIDlet-Version: 0.1.0
+MIDlet-Description: GoogleME
+MIDlet-Name: GooglME
+MIDlet-Vendor: Erik C. Thauvin
+MIDlet-Info-URL: http://www.thauvin.net/erik/j2me/
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Permissions: javax.microedition.io.Connector.sms,javax.wireless.messaging.sms.send
