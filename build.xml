@@ -86,7 +86,7 @@
 		<wtkrun jadfile="${path.deploy}/${ant.project.name}-2.jad" device="DefaultColorPhone" wait="true"/>
 	</target>
 	
-	<target name="build" depends="jar,jar-2" description="Rebuilds project">
+	<target name="build" depends="jar,clean,jar-2" description="Rebuilds project">
 	</target>
 	
 	<target name="clean" depends="init" description="Removes classses">

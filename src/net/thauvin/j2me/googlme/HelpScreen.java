@@ -71,6 +71,8 @@ public class HelpScreen extends Form
 		append(new StringItem(GooglME.CHOICE_LOCAL_SHOWTIMES + ": ",
 							  "To get local movie showtimes, enter the movie's title. For a listing of theaters near you, enter 'theaters'. For a listing of movies playing near you, enter 'movies'. The permanent location setting is automatically added to your query.\n\n"));
 		append(new StringItem(GooglME.CHOICE_DEFINITION + ": ", "For definitions, enter the word or term.\n\n"));
+		append(new StringItem(GooglME.CHOICE_WEATHER + ": ",
+							  "To get the latest weather conditions and four-day forecast for a particular U.S. location, just enter your location, zip or city and state.\n\n"));
 
 		addCommand(GooglME.COMMAND_BACK);
 

@@ -84,6 +84,11 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 	protected static final String CHOICE_GOOGLE_SMS = "Google SMS";
 
 	/**
+	 * Google Weather choice.
+	 */
+	protected static final String CHOICE_WEATHER = "Weather";
+
+	/**
 	 * Local Showtimes choice.
 	 */
 	protected static final String CHOICE_LOCAL_SHOWTIMES = "Local Showtimes";
@@ -107,7 +112,7 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 	/**
 	 * The application version.
 	 */
-	protected static final String APP_VERSION = "0.3";
+	protected static final String APP_VERSION = "0.4";
 
 	/**
 	 * The <code>Back</code> command.
@@ -121,7 +126,7 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 											  {
 												  CHOICE_GOOGLE_SMS, CHOICE_GOOGLE_LOCAL, CHOICE_FROOGLE_PRICES,
 												  CHOICE_GOOGLE_SEARCH, CHOICE_MOVIE_SHOWTIMES, CHOICE_LOCAL_SHOWTIMES,
-												  CHOICE_DEFINITION
+												  CHOICE_DEFINITION, CHOICE_WEATHER
 											  };
 
 	/**
@@ -183,6 +188,11 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 	 * The Movie query prefix.
 	 */
 	private static final String PREFIX_MOVIE = "movie: ";
+
+	/**
+	 * The Weather query prefix.
+	 */
+	private static final String PREFIX_WEATHER = "weather ";
 
 	/**
 	 * The history preferences key.
@@ -404,6 +414,13 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 					_mainScreen.queryFld.setString(query.substring(PREFIX_MOVIE.length()));
 					_mainScreen.actionPopup.setSelectedIndex(choiceIndex(CHOICE_MOVIE_SHOWTIMES), true);
 				}
+			}
+
+			// Weather
+			else if (query.startsWith(PREFIX_WEATHER))
+			{
+				_mainScreen.queryFld.setString(query.substring(PREFIX_WEATHER.length()));
+				_mainScreen.actionPopup.setSelectedIndex(choiceIndex(CHOICE_WEATHER), true);
 			}
 
 			// Local
@@ -706,6 +723,12 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 				{
 					text = PREFIX_MOVIE + _query;
 				}
+			}
+
+			// Weather
+			else if (_action.equals(CHOICE_WEATHER))
+			{
+				text = PREFIX_WEATHER + _query;
 			}
 
 			// Default
