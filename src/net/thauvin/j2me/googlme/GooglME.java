@@ -112,7 +112,7 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 	/**
 	 * The application version.
 	 */
-	protected static final String APP_VERSION = "0.4.1";
+	protected static final String APP_VERSION = "0.4.2";
 
 	/**
 	 * The <code>Back</code> command.
@@ -288,10 +288,10 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 		{
 			if (isValidString(_address))
 			{
-				_query = _mainScreen.queryFld.getString();
+				/* final */ String q = _mainScreen.queryFld.getString();
 				_action = CHOICES[_mainScreen.actionPopup.getSelectedIndex()];
 
-				if (isValidString(_query))
+				if (isValidString(q))
 				{
 					if (((_action.equals(CHOICE_GOOGLE_LOCAL)) || (_action.equals(CHOICE_LOCAL_SHOWTIMES))) &&
 							!isValidString(_location))
@@ -304,6 +304,11 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 						{
 							_sendingAlert = new Alert("");
 						}
+
+						_query = buildQuery(q);
+
+						addHistory(_query);
+						saveHistory();
 
 						alert(_sendingAlert, "Sending SMS", "Sending message to " + _address + "...", d, 2500, false);
 
@@ -573,10 +578,8 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 		{
 			_history.removeElementAt(MAX_HISTORY - 1);
 		}
-
+		
 		_history.insertElementAt(query, 0);
-
-		saveHistory();
 	}
 
 	// Displays a modal message/error alert dialog.
@@ -604,6 +607,75 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 		alert.setTimeout(timeout);
 
 		_display.setCurrent(alert, d);
+	}
+
+	// Builds the full query .
+	private String buildQuery(String query)
+	{
+		/* final */ String text;
+
+		if (_action.equals(CHOICE_GOOGLE_LOCAL))
+		{
+			if (isValidString(_location))
+			{
+				text = query + '.' + _location;
+			}
+			else
+			{
+				text = query;
+			}
+		}
+
+		// Froogle
+		else if (_action.equals(CHOICE_FROOGLE_PRICES))
+		{
+			text = PREFIX_FROOGLE + query;
+		}
+
+		// Google
+		else if (_action.equals(CHOICE_GOOGLE_SEARCH))
+		{
+			text = PREFIX_GOOGLE + query;
+		}
+
+		// Definition
+		else if (_action.equals(CHOICE_DEFINITION))
+		{
+			text = PREFIX_DEFINITION + query;
+		}
+
+		// Showtimes
+		else if (_action.equals(CHOICE_MOVIE_SHOWTIMES))
+		{
+			text = PREFIX_MOVIE + query;
+		}
+
+		// Local Showtimes
+		else if (_action.equals(CHOICE_LOCAL_SHOWTIMES))
+		{
+			if (isValidString(_location))
+			{
+				text = PREFIX_MOVIE + query + ' ' + _location;
+			}
+			else
+			{
+				text = PREFIX_MOVIE + query;
+			}
+		}
+
+		// Weather
+		else if (_action.equals(CHOICE_WEATHER))
+		{
+			text = PREFIX_WEATHER + query;
+		}
+
+		// Default
+		else
+		{
+			text = query;
+		}
+
+		return text;
 	}
 
 	// Exits the application.
@@ -674,73 +746,8 @@ public class GooglME extends MIDlet implements CommandListener, Runnable
 			/* final */ TextMessage msg = (TextMessage) conn.newMessage(MessageConnection.TEXT_MESSAGE);
 			msg.setAddress(address);
 
-			/* final */ String text;
+			msg.setPayloadText(_query);
 
-			if (_action.equals(CHOICE_GOOGLE_LOCAL))
-			{
-				if (isValidString(_location))
-				{
-					text = _query + '.' + _location;
-				}
-				else
-				{
-					text = _query;
-				}
-			}
-
-			// Froogle
-			else if (_action.equals(CHOICE_FROOGLE_PRICES))
-			{
-				text = PREFIX_FROOGLE + _query;
-			}
-
-			// Google
-			else if (_action.equals(CHOICE_GOOGLE_SEARCH))
-			{
-				text = PREFIX_GOOGLE + _query;
-			}
-
-			// Definition
-			else if (_action.equals(CHOICE_DEFINITION))
-			{
-				text = PREFIX_DEFINITION + _query;
-			}
-
-			// Showtimes
-			else if (_action.equals(CHOICE_MOVIE_SHOWTIMES))
-			{
-				text = PREFIX_MOVIE + _query;
-			}
-
-			// Local Showtimes
-			else if (_action.equals(CHOICE_LOCAL_SHOWTIMES))
-			{
-				if (isValidString(_location))
-				{
-					text = PREFIX_MOVIE + _query + ' ' + _location;
-				}
-				else
-				{
-					text = PREFIX_MOVIE + _query;
-				}
-			}
-
-			// Weather
-			else if (_action.equals(CHOICE_WEATHER))
-			{
-				text = PREFIX_WEATHER + _query;
-			}
-
-			// Default
-			else
-			{
-				text = _query;
-			}
-
-			// NOTE: Must be preformed before sending the SMS on the T616.
-			addHistory(text);
-
-			msg.setPayloadText(text);
 			conn.send(msg);
 
 			//alert("SMS Sent", "The text message was sent.", _mainScreen, false);

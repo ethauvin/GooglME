@@ -115,7 +115,7 @@
     <first-group selected-file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/GooglME.java">
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/GooglME.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="739" column="21" selection-start="16758" selection-end="16758" vertical-scroll-proportion="0.48008385">
+          <state line="697" column="29" selection-start="15773" selection-end="15773" vertical-scroll-proportion="0.4">
             <folding>
               <element signature="imports" expanded="true" />
             </folding>
@@ -124,7 +124,7 @@
       </entry>
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/RmsIndex.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="32" column="26" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.057651993">
+          <state line="32" column="26" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.07804878">
             <folding>
               <element signature="imports" expanded="true" />
             </folding>
@@ -133,28 +133,28 @@
       </entry>
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/HistoryScreen.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="59" column="56" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.42767295">
+          <state line="59" column="56" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.66341466">
             <folding />
           </state>
         </provider>
       </entry>
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/HelpScreen.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="65" column="49" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.5250266">
+          <state line="65" column="49" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.58">
             <folding />
           </state>
         </provider>
       </entry>
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/MainScreen.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="62" column="36" selection-start="2350" selection-end="2350" vertical-scroll-proportion="0.4171908">
+          <state line="56" column="38" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.36747968">
             <folding />
           </state>
         </provider>
       </entry>
       <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/PrefsScreen.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="57" column="36" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.36373165">
+          <state line="57" column="36" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.43252033">
             <folding>
               <element signature="imports" expanded="true" />
             </folding>
@@ -163,7 +163,7 @@
       </entry>
       <entry file="file://$PROJECT_DIR$/midp-1/net/thauvin/j2me/googlme/Util.java" pinned="false">
         <provider selected="true" editor-type-id="text-editor">
-          <state line="75" column="59" selection-start="2629" selection-end="2629" vertical-scroll-proportion="0.6415094">
+          <state line="33" column="6" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.64715445">
             <folding />
           </state>
         </provider>
@@ -179,25 +179,25 @@
   <component name="InspectionManager">
     <option name="AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="SPLITTER_PROPORTION" value="0.5" />
-    <profile name="Default" />
+    <profile name="Erik's Inspections" />
   </component>
   <component name="J2EEProjectPane" />
   <component name="NamedScopeManager" />
   <component name="PackagesPane">
-    <expanded_node url="net" module="GooglME-1" type="package" />
-    <expanded_node url="net.thauvin.j2me.googlme" module="GooglME-1" type="package" />
-    <expanded_node url="" module="GooglME-1" type="module" />
     <expanded_node url="net.thauvin" module="GooglME-1" type="package" />
+    <expanded_node url="net.thauvin.j2me.googlme" module="GooglME-1" type="package" />
+    <expanded_node url="net" module="GooglME-1" type="package" />
+    <expanded_node url="" module="GooglME-1" type="module" />
     <expanded_node url="net.thauvin.j2me" module="GooglME-1" type="package" />
   </component>
   <component name="ProjectPane">
-    <expanded_node url="file://$PROJECT_DIR$" module="GooglME-1" type="directory" />
-    <expanded_node url="" module="GooglME-1" type="module" />
-    <expanded_node url="file://$PROJECT_DIR$/src/net" module="GooglME-1" type="directory" />
-    <expanded_node url="file://$PROJECT_DIR$/src/net/thauvin" module="GooglME-1" type="directory" />
-    <expanded_node url="file://$PROJECT_DIR$/src" module="GooglME-1" type="directory" />
-    <expanded_node url="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme" module="GooglME-1" type="directory" />
     <expanded_node url="file://$PROJECT_DIR$/src/net/thauvin/j2me" module="GooglME-1" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme" module="GooglME-1" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src" module="GooglME-1" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$" module="GooglME-1" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src/net/thauvin" module="GooglME-1" type="directory" />
+    <expanded_node url="file://$PROJECT_DIR$/src/net" module="GooglME-1" type="directory" />
+    <expanded_node url="" module="GooglME-1" type="module" />
   </component>
   <component name="ProjectView">
     <navigator currentView="PackagesPane" splitterProportion="0.5">
@@ -231,12 +231,19 @@
   </component>
   <component name="RunManager">
     <activeType name="Application" />
-    <configuration selected="false" default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <module name="" />
+    <configuration selected="false" default="true" type="WebLogic Instance" factoryName="Local">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="7001" />
+      <option name="LOCAL" value="true" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+      <option name="DOMAIN_PATH" value="" />
+      <option name="USER" value="weblogic" />
+      <option name="PASSWORD" value="weblogic" />
+      <option name="SERVER_NAME" value="myserver" />
+      <option name="DOMAIN_NAME" value="mydomain" />
     </configuration>
     <configuration selected="false" default="true" type="JUnit" factoryName="JUnit">
       <module name="" />
@@ -252,26 +259,12 @@
         <value defaultName="wholeProject" />
       </option>
     </configuration>
-    <configuration selected="false" default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration selected="false" default="true" type="WebLogic Instance" factoryName="Local">
-      <option name="WORKING_DIRECTORY" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="7001" />
-      <option name="LOCAL" value="true" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
-      <option name="DOMAIN_PATH" value="" />
-      <option name="USER" value="weblogic" />
-      <option name="PASSWORD" value="weblogic" />
-      <option name="SERVER_NAME" value="myserver" />
-      <option name="DOMAIN_NAME" value="mydomain" />
+    <configuration selected="false" default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="" />
     </configuration>
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -282,6 +275,13 @@
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="C:/IntelliJ-IDEA/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration selected="false" default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
   </component>
   <component name="SelectInManager" />
@@ -330,21 +330,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="13" width="1445" height="1124" extended-state="0" />
+    <frame x="-4" y="-4" width="1288" height="808" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="7" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.2" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.12540454" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33032128" order="1" />
       <window_info id="Jalopy" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.2734694" order="1" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33024693" order="8" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.39969134" order="6" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33032128" order="8" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.3995984" order="6" />
       <window_info id="Profile" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="8" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.17142858" order="2" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="true" weight="0.11245955" order="2" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.25" order="3" />
       <window_info id="CVS File View" active="false" anchor="right" auto_hide="false" internal_type="docked" type="docked" visible="false" weight="0.33" order="0" />
@@ -444,9 +444,16 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://C:/j2sdk1.4.2_07/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="515" column="36" selection-start="20698" selection-end="20698" vertical-scroll-proportion="0.3329753">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/GooglME.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="739" column="21" selection-start="16758" selection-end="16758" vertical-scroll-proportion="0.48008385">
+        <state line="697" column="29" selection-start="15773" selection-end="15773" vertical-scroll-proportion="0.4">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -455,7 +462,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/RmsIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.057651993">
+        <state line="32" column="26" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.07804878">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -464,28 +471,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/HistoryScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="56" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.42767295">
+        <state line="59" column="56" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.66341466">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/HelpScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="49" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.5250266">
+        <state line="65" column="49" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.58">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/MainScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="36" selection-start="2350" selection-end="2350" vertical-scroll-proportion="0.4171908">
+        <state line="56" column="38" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.36747968">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/thauvin/j2me/googlme/PrefsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="36" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.36373165">
+        <state line="57" column="36" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.43252033">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -494,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/midp-1/net/thauvin/j2me/googlme/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="59" selection-start="2629" selection-end="2629" vertical-scroll-proportion="0.6415094">
+        <state line="33" column="6" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.64715445">
           <folding />
         </state>
       </provider>
